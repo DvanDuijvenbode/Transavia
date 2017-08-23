@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170823 11:36:03.483" generator="Robot 3.0.2 (Python 2.7.12 on win32)">
+<suite source="C:\Users\denni\Documents\Transavia Robot Framework" id="s1" name="Transavia Robot Framework">
+<suite source="C:\Users\denni\Documents\Transavia Robot Framework\Tests" id="s1-s1" name="Tests">
+<suite source="C:\Users\denni\Documents\Transavia Robot Framework\Tests\bookflight.robot" id="s1-s1-s1" name="Bookflight">
+<test id="s1-s1-s1-t1" name="Select destination and departure date">
+<kw name="Given User is on the page https://www.transavia.com/en-NL/home/" library="bookflight">
+<kw name="Go To Link" library="landingpage po">
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20170823 11:36:03.666" level="INFO">Opening browser 'chrome' to base url 'https://www.transavia.com/en-NL/home/'</msg>
+<status status="PASS" endtime="20170823 11:36:09.569" starttime="20170823 11:36:03.665"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170823 11:36:10.720" starttime="20170823 11:36:09.570"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//button[@class='for-desktop button button-primary button-call-to-action cc-button fixed-right medium cookie-consent-close']</arg>
+</arguments>
+<status status="PASS" endtime="20170823 11:36:10.818" starttime="20170823 11:36:10.720"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170823 11:36:12.822" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170823 11:36:12.823" starttime="20170823 11:36:10.820"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//button[@class='for-desktop button button-primary button-call-to-action cc-button fixed-right medium cookie-consent-close']</arg>
+</arguments>
+<msg timestamp="20170823 11:36:12.824" level="INFO">Clicking element 'xpath=//button[@class='for-desktop button button-primary button-call-to-action cc-button fixed-right medium cookie-consent-close']'.</msg>
+<status status="PASS" endtime="20170823 11:36:12.898" starttime="20170823 11:36:12.823"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170823 11:36:14.899" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170823 11:36:14.899" starttime="20170823 11:36:12.898"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:14.900" starttime="20170823 11:36:03.665"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:14.900" starttime="20170823 11:36:03.664"></status>
+</kw>
+<kw name="When User selects departure location Amsterdam (Schiphol)" library="bookflight">
+<kw name="Select Departure Location" library="landingpage po">
+<arguments>
+<arg>${departure}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>id=routeSelection_DepartureStation-input</arg>
+</arguments>
+<status status="PASS" endtime="20170823 11:36:14.923" starttime="20170823 11:36:14.901"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=routeSelection_DepartureStation-input</arg>
+<arg>${departure}</arg>
+</arguments>
+<msg timestamp="20170823 11:36:14.924" level="INFO">Typing text 'Amsterdam (Schiphol)' into text field 'id=routeSelection_DepartureStation-input'</msg>
+<status status="PASS" endtime="20170823 11:36:15.385" starttime="20170823 11:36:14.924"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170823 11:36:17.386" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170823 11:36:17.386" starttime="20170823 11:36:15.386"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:17.386" starttime="20170823 11:36:14.901"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:17.387" starttime="20170823 11:36:14.900"></status>
+</kw>
+<kw name="And User selects destination Alicante, Spain" library="bookflight">
+<kw name="Select Destination" library="landingpage po">
+<arguments>
+<arg>${destination}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=routeSelection_ArrivalStation-input</arg>
+<arg>${destination}</arg>
+</arguments>
+<msg timestamp="20170823 11:36:17.388" level="INFO">Typing text 'Alicante, Spain' into text field 'id=routeSelection_ArrivalStation-input'</msg>
+<status status="PASS" endtime="20170823 11:36:17.799" starttime="20170823 11:36:17.388"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170823 11:36:19.800" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170823 11:36:19.800" starttime="20170823 11:36:17.800"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:19.800" starttime="20170823 11:36:17.388"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:19.801" starttime="20170823 11:36:17.387"></status>
+</kw>
+<kw name="And User selects departuredate 25 Aug 2017" library="bookflight">
+<kw name="Select Departuredate" library="landingpage po">
+<arguments>
+<arg>${departuredate}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=dateSelection_OutboundDate-datepicker</arg>
+<arg>${destinationdate}</arg>
+</arguments>
+<msg timestamp="20170823 11:36:19.803" level="INFO">Typing text '25 Aug 2017' into text field 'id=dateSelection_OutboundDate-datepicker'</msg>
+<status status="PASS" endtime="20170823 11:36:20.151" starttime="20170823 11:36:19.803"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170823 11:36:22.154" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170823 11:36:22.154" starttime="20170823 11:36:20.153"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:22.155" starttime="20170823 11:36:19.802"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:22.155" starttime="20170823 11:36:19.801"></status>
+</kw>
+<kw name="And User selects returndate 1 Sep 2017" library="bookflight">
+<kw name="Select Returndate" library="landingpage po">
+<arguments>
+<arg>${returndate}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=dateSelection_IsReturnFlight-datepicker</arg>
+<arg>${returndate}</arg>
+</arguments>
+<msg timestamp="20170823 11:36:22.157" level="INFO">Typing text '1 Sep 2017' into text field 'id=dateSelection_IsReturnFlight-datepicker'</msg>
+<status status="PASS" endtime="20170823 11:36:22.454" starttime="20170823 11:36:22.157"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170823 11:36:24.457" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170823 11:36:24.458" starttime="20170823 11:36:22.455"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:24.460" starttime="20170823 11:36:22.156"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:24.460" starttime="20170823 11:36:22.156"></status>
+</kw>
+<kw name="And User clicks Search button" library="bookflight">
+<kw name="Click Search" library="landingpage po">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="desktop"]/section/div[3]/div/button</arg>
+</arguments>
+<msg timestamp="20170823 11:36:24.465" level="INFO">Clicking element 'xpath=//*[@id="desktop"]/section/div[3]/div/button'.</msg>
+<status status="PASS" endtime="20170823 11:36:27.575" starttime="20170823 11:36:24.464"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170823 11:36:29.576" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170823 11:36:29.576" starttime="20170823 11:36:27.576"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:29.576" starttime="20170823 11:36:24.462"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:29.577" starttime="20170823 11:36:24.461"></status>
+</kw>
+<kw name="Then Page title should be Book a flight" library="bookflight">
+<kw name="Get Page Title" library="bookaflight po">
+<assign>
+<var>${actualtitle}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//h1[@class='header_title']</arg>
+</arguments>
+<status status="PASS" endtime="20170823 11:36:29.605" starttime="20170823 11:36:29.578"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Return value of element attribute.</doc>
+<arguments>
+<arg>xpath=//h1[@class='header_title']@innerHTML</arg>
+</arguments>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20170823 11:36:29.624" level="INFO">${title} = Book a flight</msg>
+<status status="PASS" endtime="20170823 11:36:29.624" starttime="20170823 11:36:29.606"></status>
+</kw>
+<msg timestamp="20170823 11:36:29.625" level="INFO">${actualtitle} = Book a flight</msg>
+<status status="PASS" endtime="20170823 11:36:29.625" starttime="20170823 11:36:29.578"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${actualtitle}</arg>
+</arguments>
+<status status="PASS" endtime="20170823 11:36:29.626" starttime="20170823 11:36:29.625"></status>
+</kw>
+<status status="PASS" endtime="20170823 11:36:29.626" starttime="20170823 11:36:29.577"></status>
+</kw>
+<tags>
+<tag>dev</tag>
+</tags>
+<status status="PASS" endtime="20170823 11:36:29.626" critical="yes" starttime="20170823 11:36:03.663"></status>
+</test>
+<status status="PASS" endtime="20170823 11:36:29.627" starttime="20170823 11:36:03.527"></status>
+</suite>
+<status status="PASS" endtime="20170823 11:36:29.629" starttime="20170823 11:36:03.524"></status>
+</suite>
+<status status="PASS" endtime="20170823 11:36:29.630" starttime="20170823 11:36:03.502"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">dev</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Transavia Robot Framework" pass="1">Transavia Robot Framework</stat>
+<stat fail="0" id="s1-s1" name="Tests" pass="1">Transavia Robot Framework.Tests</stat>
+<stat fail="0" id="s1-s1-s1" name="Bookflight" pass="1">Transavia Robot Framework.Tests.Bookflight</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
